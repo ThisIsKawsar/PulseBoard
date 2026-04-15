@@ -42,6 +42,30 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[Redberry](https://redberry.international/laravel-development)**
 - **[Active Logic](https://activelogic.com)**
 
+## Docker
+
+This Laravel application can be run in Docker using the provided `Dockerfile` and `docker-compose.yml`.
+
+Start the application with:
+
+```bash
+docker compose up --build
+```
+
+Run database migrations from the app container:
+
+```bash
+docker compose exec app php artisan migrate --force
+```
+
+Then access the API at `http://127.0.0.1:8000`.
+
+The MySQL service is available on port `3306` with:
+
+- database: `plusboard`
+- username: `root`
+- password: `secret`
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
